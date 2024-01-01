@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:saglikapp/view/login/login_view.dart';
-import 'package:saglikapp/view/widget/welcomebutton.dart';
+import 'package:saglikapp/view/widget/button.dart';
 
 class WelcomeScreen extends StatelessWidget {
- const WelcomeScreen({Key? key}) : super(key: key);
+  const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,8 @@ class WelcomeScreen extends StatelessWidget {
       child: Container(
         height: MediaQuery.sizeOf(context).height,
         width: MediaQuery.sizeOf(context).width,
-        padding: EdgeInsets.only(top: 30, right: 10, left: 10, bottom: 10),
+        padding:
+            const EdgeInsets.only(top: 30, right: 10, left: 10, bottom: 10),
         child: Column(
           children: [
             Align(
@@ -20,19 +21,19 @@ class WelcomeScreen extends StatelessWidget {
                 onPressed: () {
                   //  Navigator.push(context, MaterialPageRoute(builder: (context) =>));
                 },
-                child: Text(
+                child: const Text(
                   "Atla",
                   style: TextStyle(color: Color(0xFF7165D6), fontSize: 20),
                 ),
               ),
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             Padding(
               padding: EdgeInsets.all(20),
               child: Image.asset("assets/images/doctors.png"),
             ),
-            SizedBox(height: 50),
-            Text(
+            const SizedBox(height: 50),
+            const Text(
               "Doktor Randevusu",
               style: TextStyle(
                   color: Color(0xFF7165D6),
@@ -41,20 +42,30 @@ class WelcomeScreen extends StatelessWidget {
                   letterSpacing: 1,
                   wordSpacing: 2),
             ),
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10),
+            const Text(
               "Doktor Randevunuz",
               style: TextStyle(
                   color: Colors.black54,
                   fontSize: 18,
                   fontWeight: FontWeight.w500),
             ),
-            SizedBox(height: 60),
-            Row(
+            const SizedBox(height: 60),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                WelcomeButtons(text: "Giriş",nereye: LoginScreen()),
-                WelcomeButtons(text: "Kayıt Ol", nereye: LoginScreen()),
+                Button(
+                  text: "Giriş",
+                  nereye: const LoginScreen(),
+                  konum: TextAlign.center,
+                  boyut: 22,
+                ),
+                Button(
+                  text: "Kayıt Ol",
+                  nereye: const LoginScreen(),
+                  konum: TextAlign.center,
+                  boyut: 22,
+                ),
               ],
             )
           ],
@@ -63,5 +74,3 @@ class WelcomeScreen extends StatelessWidget {
     );
   }
 }
-
-
