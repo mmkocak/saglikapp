@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:saglikapp/wiew/welcome/welcome_wiew.dart';
+import 'package:saglikapp/view/welcome/welcome_wiew.dart';
 void main(){
   runApp(MyApp());
 }
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeScreen(),
+      home:const  WelcomeScreen(),
     );
   }
 }
