@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:saglikapp/view/mixin/renkler.dart';
 
-class Button extends StatelessWidget {
+class Button extends StatelessWidget with Renkler {
   final String text;
   final Widget nereye;
   final TextAlign konum;
@@ -16,7 +17,7 @@ class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: const Color(0xFF7165D6),
+      color: Renkler.mor1,
       borderRadius: BorderRadius.circular(10),
       child: InkWell(
         onTap: () {
@@ -27,7 +28,7 @@ class Button extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 40),
           child: Text(
             text,
-            style: TextStyle(color: Colors.white, fontSize: boyut),
+            style: TextStyle(color: Renkler.beyaz, fontSize: boyut),
             textAlign: konum,
           ),
         ),

@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:saglikapp/view/mixin/renkler.dart';
+import 'package:saglikapp/view/signup/signuup_view.dart';
 import 'package:saglikapp/view/widget/button.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends StatefulWidget with Renkler {
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
@@ -43,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: TextField(
                 obscureText: passToggle ? true : false,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   label: const Text("Kullanıcı Adını Gir"),
                   prefixIcon: const Icon(Icons.lock),
                   suffixIcon: InkWell(
@@ -56,8 +58,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       setState(() {});
                     },
                     child: passToggle
-                        ? Icon(CupertinoIcons.eye_slash_fill)
-                        : Icon(CupertinoIcons.eye_fill),
+                        ? const Icon(CupertinoIcons.eye_slash_fill)
+                        : const Icon(CupertinoIcons.eye_fill),
                   ),
                 ),
               ),
@@ -75,6 +77,33 @@ class _LoginScreenState extends State<LoginScreen> {
                     konum: TextAlign.center,
                     boyut: 24,
                   )),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "Hesabın yok mu ?",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Renkler.black54,
+                  ),
+                ),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SignupScreen()));
+                    },
+                    child: const Text(
+                      "Hesap oluştur",
+                      style: TextStyle(fontSize: 18, color: Renkler.mor1),
+                    ))
+              ],
             )
           ],
         )),

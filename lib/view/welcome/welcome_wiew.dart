@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:saglikapp/view/login/login_view.dart';
+import 'package:saglikapp/view/signup/signuup_view.dart';
 import 'package:saglikapp/view/widget/button.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -29,7 +30,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 50),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Image.asset("assets/images/doctors.png"),
             ),
             const SizedBox(height: 50),
@@ -56,13 +57,13 @@ class WelcomeScreen extends StatelessWidget {
               children: [
                 Button(
                   text: "Giriş",
-                  nereye: const LoginScreen(),
+                  nereye: LoginScreen(),
                   konum: TextAlign.center,
                   boyut: 22,
                 ),
                 Button(
                   text: "Kayıt Ol",
-                  nereye: const LoginScreen(),
+                  nereye: SignupScreen(),
                   konum: TextAlign.center,
                   boyut: 22,
                 ),
