@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:saglikapp/view/login/login_view.dart';
 import 'package:saglikapp/view/mixin/renkler.dart';
+import 'package:saglikapp/view/widget/button.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({Key? key}) : super(key: key);
@@ -82,7 +84,42 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                 ),
               ),
-            )
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            const Button(
+                text: "Kayıt Ol",
+                nereye: LoginScreen(),
+                konum: TextAlign.center,
+                boyut: 22),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "Hesabın yok mu ?",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Renkler.black54,
+                  ),
+                ),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SignupScreen()));
+                    },
+                    child: const Text(
+                      "Hesap oluştur",
+                      style: TextStyle(fontSize: 18, color: Renkler.mor1),
+                    ))
+              ],
+            ),
           ],
         )),
       ),
