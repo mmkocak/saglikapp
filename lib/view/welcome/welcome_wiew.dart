@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:saglikapp/view/login/login_view.dart';
+import 'package:saglikapp/widget/navbar_roots.dart';
 import 'package:saglikapp/view/signup/signuup_view.dart';
-import 'package:saglikapp/view/widget/button.dart';
+import 'package:saglikapp/widget/button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class WelcomeScreen extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: () {
-                  //  Navigator.push(context, MaterialPageRoute(builder: (context) =>));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => NavbarRoots()));
                 },
                 child: const Text(
                   "Atla",

@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:saglikapp/view/mixin/renkler.dart';
+import 'package:saglikapp/mixin/renkler.dart';
 import 'package:saglikapp/view/signup/signuup_view.dart';
-import 'package:saglikapp/view/widget/button.dart';
+import 'package:saglikapp/widget/button.dart';
 
 class LoginScreen extends StatefulWidget with Renkler {
   const LoginScreen({Key? key}) : super(key: key);

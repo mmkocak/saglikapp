@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:saglikapp/view/mixin/renkler.dart';
+import 'package:saglikapp/mixin/renkler.dart';
 
 class Button extends StatelessWidget with Renkler {
   final String text;

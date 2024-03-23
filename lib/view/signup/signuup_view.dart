@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:saglikapp/view/login/login_view.dart';
-import 'package:saglikapp/view/mixin/renkler.dart';
-import 'package:saglikapp/view/widget/button.dart';
+import 'package:saglikapp/mixin/renkler.dart';
+import 'package:saglikapp/widget/button.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({Key? key}) : super(key: key);
