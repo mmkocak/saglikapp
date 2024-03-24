@@ -4,10 +4,10 @@ import 'package:flutter/widgets.dart';
 class HomeScreen extends StatelessWidget {
   List symptoms = [
     "Sıcaklık",
-    "Snuffle",
+    "koklama",
     "Ateş",
-    "Öksürük"
-        "Soğuk"
+    "Öksürük",
+    "Soğuk"
   ];
   List imgs = [
     "doctor1.jpg"
@@ -54,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: const Color(0xFF7165D6),
                     borderRadius: BorderRadius.circular(10),
-                    boxShadow:const[
+                    boxShadow: const [
                       BoxShadow(
                         color: Colors.black12,
                         blurRadius: 6,
@@ -62,26 +62,115 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child:  Column(
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        padding: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
+                        padding: const EdgeInsets.all(8),
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                           shape: BoxShape.circle,
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.add,
                           color: Color(0xFF7165d6),
                           size: 35,
                         ),
                       ),
-                    ],),
+                      const SizedBox(height: 30),
+                      const Text(
+                        "Klinik Ziyareti",
+                        style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      const SizedBox(height: 5,),
+                      const Text("Randevu Al", style: TextStyle(color: Colors.white54),),
+                    ],
+                  ),
+                ),
+              ),
+               InkWell(
+                onTap: () {},
+                child: Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color:  Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 6,
+                        spreadRadius: 4,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: const BoxDecoration(
+                          color: Color(0xFFF0eefa),
+                          shape: BoxShape.circle,
+                        ),
+                        child: const Icon(
+                          Icons.home_filled,
+                          color: Color(0xFF7165d6),
+                          size: 35,
+                        ),
+                      ),
+                      const SizedBox(height: 30),
+                      const Text(
+                        "Anasayfa",
+                        style: TextStyle(
+                            fontSize: 12,
+                            //color: Colors.black54,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      const SizedBox(height: 5,),
+                      const Text("Doktoru eve çağır", style: TextStyle(color: Colors.black54),),
+                    ],
+                  ),
                 ),
               ),
             ],
-          )
+          ),
+          const SizedBox(height: 25),
+          const Padding(padding: EdgeInsets.only(left: 15),
+          child: Text("Belirtileriniz Neler ?", style: TextStyle(
+            fontSize: 23,
+            fontWeight: FontWeight.w500,
+            color: Colors.black54,
+          ),),
+          ),
+          SizedBox(height: 70,
+          child: ListView.builder(
+            shrinkWrap: true,
+            scrollDirection: Axis.horizontal,
+            itemCount: symptoms.length,
+            itemBuilder: (context, index) {
+            return Container(
+              margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              decoration: BoxDecoration(
+                color: Color(0xFFF4F6FA),
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 4,
+                    spreadRadius: 2,
+                  ),
+                ]
+              ),
+              child: Center(child: Text(symptoms[index],
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black54),),),
+            );
+          },),
+          ),
+
         ],
       ),
     );
