@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
-  List symptoms = [
-    "Sıcaklık",
-    "koklama",
-    "Ateş",
-    "Öksürük",
-    "Soğuk"
-  ];
-  List imgs = [
+ final List symptoms = ["Sıcaklık", "koklama", "Ateş", "Öksürük", "Soğuk"];
+  final List imgs = [
     "doctor1.jpg"
         "doctor2.jpg"
         "doctor3.jpg"
         "doctor4.jpg"
   ];
 
-  HomeScreen({Key? key}) : super(key: key);
+  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -85,18 +78,23 @@ class HomeScreen extends StatelessWidget {
                             color: Colors.white,
                             fontWeight: FontWeight.w500),
                       ),
-                      const SizedBox(height: 5,),
-                      const Text("Randevu Al", style: TextStyle(color: Colors.white54),),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Text(
+                        "Randevu Al",
+                        style: TextStyle(color: Colors.white54),
+                      ),
                     ],
                   ),
                 ),
               ),
-               InkWell(
+              InkWell(
                 onTap: () {},
                 child: Container(
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    color:  Colors.white,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: const [
                       BoxShadow(
@@ -129,8 +127,13 @@ class HomeScreen extends StatelessWidget {
                             //color: Colors.black54,
                             fontWeight: FontWeight.w500),
                       ),
-                      const SizedBox(height: 5,),
-                      const Text("Doktoru eve çağır", style: TextStyle(color: Colors.black54),),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Text(
+                        "Doktoru eve çağır",
+                        style: TextStyle(color: Colors.black54),
+                      ),
                     ],
                   ),
                 ),
@@ -138,39 +141,51 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 25),
-          const Padding(padding: EdgeInsets.only(left: 15),
-          child: Text("Belirtileriniz Neler ?", style: TextStyle(
-            fontSize: 23,
-            fontWeight: FontWeight.w500,
-            color: Colors.black54,
-          ),),
-          ),
-          SizedBox(height: 70,
-          child: ListView.builder(
-            shrinkWrap: true,
-            scrollDirection: Axis.horizontal,
-            itemCount: symptoms.length,
-            itemBuilder: (context, index) {
-            return Container(
-              margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-              padding: const EdgeInsets.symmetric(horizontal: 25),
-              decoration: BoxDecoration(
-                color: Color(0xFFF4F6FA),
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 4,
-                    spreadRadius: 2,
-                  ),
-                ]
+          const Padding(
+            padding: EdgeInsets.only(left: 15),
+            child: Text(
+              "Belirtileriniz Neler ?",
+              style: TextStyle(
+                fontSize: 23,
+                fontWeight: FontWeight.w500,
+                color: Colors.black54,
               ),
-              child: Center(child: Text(symptoms[index],
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black54),),),
-            );
-          },),
+            ),
           ),
-
+          SizedBox(
+            height: 70,
+            child: ListView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.horizontal,
+              itemCount: symptoms.length,
+              itemBuilder: (context, index) {
+                return Container(
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  decoration: BoxDecoration(
+                      color: const Color(0xFFF4F6FA),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 4,
+                          spreadRadius: 2,
+                        ),
+                      ]),
+                  child: Center(
+                    child: Text(
+                      symptoms[index],
+                      style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black54),
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );

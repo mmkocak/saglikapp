@@ -5,7 +5,7 @@ import 'package:saglikapp/mixin/renkler.dart';
 import 'package:saglikapp/widget/button.dart';
 
 class SignupScreen extends StatefulWidget {
-  const SignupScreen({Key? key}) : super(key: key);
+  const SignupScreen({super.key});
 
   @override
   _SignupScreenState createState() => _SignupScreenState();
@@ -62,13 +62,13 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
               child: TextField(
                 obscureText: passToggle ? true : false,
                 decoration: InputDecoration(
                   labelText: "Şifre",
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.password_rounded),
+                  border: const OutlineInputBorder(),
+                  prefixIcon: const Icon(Icons.password_rounded),
                   suffixIcon: InkWell(
                     onTap: () {
                       if (passToggle == true) {
@@ -85,7 +85,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             const Button(
@@ -93,7 +93,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 nereye: LoginScreen(),
                 konum: TextAlign.center,
                 boyut: 22),
-            SizedBox(
+           const  SizedBox(
               height: 20,
             ),
             Row(
@@ -112,7 +112,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SignupScreen()));
+                              builder: (context) => const SignupScreen()));
                     },
                     child: const Text(
                       "Hesap oluştur",

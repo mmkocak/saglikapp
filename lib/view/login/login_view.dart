@@ -5,7 +5,7 @@ import 'package:saglikapp/view/signup/signuup_view.dart';
 import 'package:saglikapp/widget/button.dart';
 
 class LoginScreen extends StatefulWidget with Renkler {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key}) ;
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -97,7 +97,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SignupScreen()));
+                              builder: (context) => const SignupScreen()));
                     },
                     child: const Text(
                       "Hesap oluştur",

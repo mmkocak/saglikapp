@@ -5,7 +5,7 @@ import 'package:saglikapp/view/signup/signuup_view.dart';
 import 'package:saglikapp/widget/button.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
+  const WelcomeScreen({super.key}) ;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class WelcomeScreen extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: TextButton(
                 onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => NavbarRoots()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const NavbarRoots()));
                 },
                 child: const Text(
                   "Atla",

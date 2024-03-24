@@ -1,10 +1,9 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:saglikapp/view/home/home_screen.dart';
 
 class NavbarRoots extends StatefulWidget {
-  const NavbarRoots({Key? key}) : super(key: key);
+  const NavbarRoots({super.key});
 
   @override
   State<NavbarRoots> createState() => _NavbarRootsState();
@@ -27,26 +26,27 @@ class _NavbarRootsState extends State<NavbarRoots> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: _screens[_selectedindex],
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 80,
         child: BottomNavigationBar(
           backgroundColor: Colors.white,
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: Color(0xFF7165D6),
+          selectedItemColor: const Color(0xFF7165D6),
           unselectedItemColor: Colors.black26,
           selectedLabelStyle:
-              TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+              const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
           currentIndex: _selectedindex,
           onTap: (index) {
             setState(() {
               _selectedindex = index;
             });
           },
-          items: [
+          items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.home_filled), label: "Anasayfa"),
             BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.chat_bubble_text_fill), label: "Mesajlar"),
+                icon: Icon(CupertinoIcons.chat_bubble_text_fill),
+                label: "Mesajlar"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.calendar_month), label: "Schedule"),
             BottomNavigationBarItem(
