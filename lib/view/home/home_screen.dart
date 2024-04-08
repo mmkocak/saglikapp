@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
- final List symptoms = ["Sıcaklık", "koklama", "Ateş", "Öksürük", "Soğuk"];
+  final List symptoms = ["Sıcaklık", "koklama", "Ateş", "Öksürük", "Soğuk"];
   final List imgs = [
-    "doctor1.jpg"
-        "doctor2.jpg"
-        "doctor3.jpg"
-        "doctor4.jpg"
+    "doctor1.jpg",
+    "doctor2.jpg",
+    "doctor3.jpg",
+    "doctor4.jpg",
   ];
 
   HomeScreen({super.key});
@@ -185,6 +185,72 @@ class HomeScreen extends StatelessWidget {
                 );
               },
             ),
+          ),
+          const SizedBox(height: 15),
+          const Padding(
+            padding: EdgeInsets.only(left: 15),
+            child: Text(
+              "Popüler doktorlar",
+              style: TextStyle(
+                  fontSize: 23,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black54),
+            ),
+          ),
+          GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2),
+            itemCount: 4,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) {
+              return InkWell(
+                onTap: () {},
+                child: Container(
+                  margin: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 4,
+                          spreadRadius: 2,
+                        )
+                      ]),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CircleAvatar(
+                        radius: 35,
+                        backgroundImage:
+                            AssetImage("assets/images/${imgs[index]}"),
+                      ),
+                     const Text(
+                        "Dr. Doktor Adı",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                     const Text(
+                        "Terapist",
+                        style: TextStyle(color: Colors.black45),
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.star, color: Colors.amber,),
+                          Text("4.9", style: TextStyle(color: Colors.black45),)
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              );
+            },
           ),
         ],
       ),
