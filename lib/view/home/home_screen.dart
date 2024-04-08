@@ -238,7 +238,7 @@ class HomeScreen extends StatelessWidget {
                         "Terapist",
                         style: TextStyle(color: Colors.black45),
                       ),
-                      Row(
+                      const Row(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
