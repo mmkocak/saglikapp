@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:saglikapp/view/appointment/appointment_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   final List symptoms = ["Sıcaklık", "koklama", "Ateş", "Öksürük", "Soğuk"];
@@ -205,7 +206,9 @@ class HomeScreen extends StatelessWidget {
             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> AppointmentScreen()));
+                },
                 child: Container(
                   margin: const EdgeInsets.all(10),
                   padding: const EdgeInsets.symmetric(vertical: 10),

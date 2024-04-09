@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:saglikapp/view/home/home_screen.dart';
+import 'package:saglikapp/view/settings/settings_screen.dart';
 
 class NavbarRoots extends StatefulWidget {
   const NavbarRoots({super.key});
@@ -19,7 +20,7 @@ class _NavbarRootsState extends State<NavbarRoots> {
     // Schedule Screen
     Container(),
     // Settings Screen
-    Container(),
+    SettingsScreen(),
   ];
   @override
   Widget build(BuildContext context) {
