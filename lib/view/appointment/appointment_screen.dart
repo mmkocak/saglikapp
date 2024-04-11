@@ -127,9 +127,51 @@ class AppointmentScreen extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(10),
                   topRight: Radius.circular(10)
-                  
                 )
               ),
+              child:  Column(
+
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                
+                children: [
+                  const Text("Doktor Hakkında",
+                  style:   TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500
+                     ),
+                  ),
+                  const SizedBox(height: 5,),
+                  const Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry.", 
+                  style: TextStyle(fontSize: 16, color: Colors.black54),
+                  ),
+                  const SizedBox(height: 10,),
+                  Row(
+                    children: [
+                     const Text("Yorumlar", 
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500
+                      ),
+                      ),
+                     const  SizedBox(width: 10,),
+                     const Icon(Icons.star, color: Colors.amber,),
+                     const Text("4.9", style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16,
+                      ),),
+                     const SizedBox(width: 5,),
+                     const Text("123", style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16,
+                        color: Color(0xFF7565d6),
+                      ),),
+                     const Spacer(),
+                      TextButton(onPressed: (){}, child: Text("Tümünü Görüntüle"))
+                    ],
+                  ),
+                ],
+                ),
             ),
           ],
         ),
