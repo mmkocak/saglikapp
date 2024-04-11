@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppointmentScreen extends StatelessWidget {
@@ -46,9 +47,8 @@ class AppointmentScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  
-                   Padding(
-                    padding: const  EdgeInsets.symmetric(vertical: 10),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -66,19 +66,45 @@ class AppointmentScreen extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 5),
-                       const  Text(
+                        const Text(
                           "Terapist",
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        const SizedBox(height: 5,),
+                        const SizedBox(
+                          height: 15,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              padding: EdgeInsets.all(10),
+                              padding: const EdgeInsets.all(10),
+                              decoration: const BoxDecoration(
+                                color: Color(0xFF9F97E2),
+                                shape: BoxShape.circle,
+                              ),
+                              child: const Icon(
+                                Icons.call,
+                                color: Colors.white,
+                                size: 25,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 20,
+                            ),
+                            Container(
+                              padding: const EdgeInsets.all(10),
+                              decoration: const BoxDecoration(
+                                color: Color(0xFF9F97E2),
+                                shape: BoxShape.circle,
+                              ),
+                              child: const Icon(
+                                CupertinoIcons.chat_bubble_text_fill,
+                                color: Colors.white,
+                                size: 25,
+                              ),
                             ),
                           ],
                         )
@@ -86,6 +112,23 @@ class AppointmentScreen extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            Container(
+              height: MediaQuery.sizeOf(context).height,
+              width: double.infinity,
+              padding:const EdgeInsets.only(
+                top: 20,
+                left: 15,
+              ),
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10)
+                  
+                )
               ),
             ),
           ],
