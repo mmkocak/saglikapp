@@ -190,36 +190,49 @@ class AppointmentScreen extends StatelessWidget {
                           ))
                     ],
                   ),
-                  SizedBox(height: 160,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 4,
-                    itemBuilder: ((context, index) {
-                    return Container(
-                      margin: EdgeInsets.all(10),
-                      padding: EdgeInsets.symmetric(vertical: 5),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black12,
-                            blurRadius: 4,
-                            spreadRadius: 2
-                          ),
-                        ],
-
-                      ),
-                      child: SizedBox(
-                        width: MediaQuery.sizeOf(context).width / 1.4,
-                        child: Column(
-                          children: [],
-                        ),
-                      ),
-                    );
-                  })),
+                  SizedBox(
+                    height: 160,
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 4,
+                        itemBuilder: ((context, index) {
+                          return Container(
+                            margin: EdgeInsets.all(10),
+                            padding: EdgeInsets.symmetric(vertical: 5),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.black12,
+                                    blurRadius: 4,
+                                    spreadRadius: 2),
+                              ],
+                            ),
+                            child: SizedBox(
+                              width: MediaQuery.sizeOf(context).width / 1.4,
+                              child: Column(
+                                children: [
+                                  ListTile(
+                                    leading: CircleAvatar(
+                                      radius: 25,
+                                      backgroundImage: AssetImage(
+                                          "assets/images/${imgs[index]}"),
+                                    ),
+                                    title: Text(
+                                      "Dr. Doktor adı",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    subtitle: Text(" 1 Gün önce "),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        })),
                   ),
-                  
                 ],
               ),
             ),
