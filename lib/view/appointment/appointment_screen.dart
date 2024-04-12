@@ -219,13 +219,29 @@ class AppointmentScreen extends StatelessWidget {
                                       backgroundImage: AssetImage(
                                           "assets/images/${imgs[index]}"),
                                     ),
-                                    title: Text(
+                                    title: const Text(
                                       "Dr. Doktor adı",
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    subtitle: Text(" 1 Gün önce "),
+                                    subtitle: const Text(" 1 Gün önce "),
+                                    trailing: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.star,
+                                          color: Colors.amber,
+                                        ),
+                                        Text(
+                                          "4.9",
+                                          style:
+                                              TextStyle(color: Colors.black54),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
