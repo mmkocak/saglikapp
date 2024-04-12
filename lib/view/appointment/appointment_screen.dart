@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class AppointmentScreen extends StatelessWidget {
   AppointmentScreen({Key? key}) : super(key: key);
@@ -226,7 +225,7 @@ class AppointmentScreen extends StatelessWidget {
                                       ),
                                     ),
                                     subtitle: const Text(" 1 Gün önce "),
-                                    trailing: Row(
+                                    trailing: const Row(
                                       mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -243,11 +242,45 @@ class AppointmentScreen extends StatelessWidget {
                                       ],
                                     ),
                                   ),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  const Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 10),
+                                    child: Text(
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                      "Dr.'a çok teşekkürler. Sayın. o harika ve profesyonel bir doktor",
+                                      style: TextStyle(color: Colors.black),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
                           );
                         })),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    "Lokasyon",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                  ),
+                  ListTile(
+                    leading: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Color(0xFFF0eefa),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Icons.location_on,
+                        size: 30,
+                        color: Color(0xFF7565d6),
+                      ),
+                    ),
                   ),
                 ],
               ),
