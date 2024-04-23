@@ -271,18 +271,77 @@ class AppointmentScreen extends StatelessWidget {
                   ListTile(
                     leading: Container(
                       padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0xFFF0eefa),
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.location_on,
                         size: 30,
                         color: Color(0xFF7565d6),
                       ),
                     ),
+                    title: const Text(
+                      "Van, Erciş merkez",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text("tıp merkezinin adres hattı"),
                   ),
                 ],
+              ),
+            ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.all(15),
+        height: 130,
+        decoration: const BoxDecoration(color: Colors.white, boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 4,
+            spreadRadius: 2,
+          )
+        ]),
+        child: Column(
+          children: [
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Muayene Ücreti",
+                  style: TextStyle(color: Colors.black54),
+                ),
+                Text(
+                  "1000 TL",
+                  style: TextStyle(
+                    color: Colors.black54,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 14,
+            ),
+            InkWell(
+              onTap: () {},
+              child: Container(
+                width: MediaQuery.sizeOf(context).width,
+                padding: EdgeInsets.symmetric(vertical: 18),
+                decoration: BoxDecoration(
+                  color: Color(0xFF7165D6),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Center(
+                  child: Text("Randevu Al",  
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  ),
+                ),
               ),
             ),
           ],
