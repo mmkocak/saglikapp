@@ -328,12 +328,12 @@ class AppointmentScreen extends StatelessWidget {
               onTap: () {},
               child: Container(
                 width: MediaQuery.sizeOf(context).width,
-                padding: EdgeInsets.symmetric(vertical: 18),
+                padding: const EdgeInsets.symmetric(vertical: 18),
                 decoration: BoxDecoration(
-                  color: Color(0xFF7165D6),
+                  color: const  Color(0xFF7165D6),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text("Randevu Al",  
                   style: TextStyle(
                     color: Colors.white,
