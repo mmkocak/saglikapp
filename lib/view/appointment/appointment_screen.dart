@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppointmentScreen extends StatelessWidget {
+  
   AppointmentScreen({Key? key}) : super(key: key);
+  
   List imgs = [
     "doctor1.jpg",
     "doctor2.jpg",
@@ -196,12 +198,12 @@ class AppointmentScreen extends StatelessWidget {
                         itemCount: 4,
                         itemBuilder: ((context, index) {
                           return Container(
-                            margin: EdgeInsets.all(10),
-                            padding: EdgeInsets.symmetric(vertical: 5),
+                            margin: const EdgeInsets.all(10),
+                            padding: const EdgeInsets.symmetric(vertical: 5),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                     color: Colors.black12,
                                     blurRadius: 4,
@@ -285,7 +287,7 @@ class AppointmentScreen extends StatelessWidget {
                       "Van, Erciş merkez",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    subtitle: Text("tıp merkezinin adres hattı"),
+                    subtitle: const Text("tıp merkezinin adres hattı"),
                   ),
                 ],
               ),
