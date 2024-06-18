@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:saglikapp/view/home/home_screen.dart';
+import 'package:saglikapp/view/schedule/schedule_Screen.dart';
 import 'package:saglikapp/view/settings/settings_screen.dart';
 
 class NavbarRoots extends StatefulWidget {
@@ -18,7 +19,7 @@ class _NavbarRootsState extends State<NavbarRoots> {
     // Messages Screen
     Container(),
     // Schedule Screen
-    Container(),
+    ScheduleScreen(),
     // Settings Screen
     SettingsScreen(),
   ];
@@ -49,7 +50,7 @@ class _NavbarRootsState extends State<NavbarRoots> {
                 icon: Icon(CupertinoIcons.chat_bubble_text_fill),
                 label: "Mesajlar"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.calendar_month), label: "Schedule"),
+                icon: Icon(Icons.calendar_month), label: "Takvim"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.settings), label: "Ayarlar"),
           ],
