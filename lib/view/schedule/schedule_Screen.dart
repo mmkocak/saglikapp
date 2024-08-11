@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:saglikapp/widget/upcoming_schedule.dart';
 
 class ScheduleScreen extends StatefulWidget {
   const ScheduleScreen({Key? key}) : super(key: key);
@@ -11,15 +12,12 @@ class ScheduleScreen extends StatefulWidget {
 class _ScheduleScreenState extends State<ScheduleScreen> {
   int _buttonIndex = 0;
   final _schedulewidgets = [
-    Center(
-      child: Text("Yaklaşan"),
-    ),
-    Center(
-      child: Text("Tamamlanmış"),
-    ),
-     Center(
-      child: Text("İptal Edilen"),
-    ),
+    // Upcoming Schedule Widget
+    UpcomingSchedule(),
+    //Complated Widget
+    Container(),
+    //Canceled Widget
+    Container(),
   ];
   @override
   Widget build(BuildContext context) {
