@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:saglikapp/view/home/home_screen.dart';
+import 'package:saglikapp/view/messages/messages_screen.dart';
 import 'package:saglikapp/view/schedule/schedule_Screen.dart';
 import 'package:saglikapp/view/settings/settings_screen.dart';
 
@@ -17,7 +18,7 @@ class _NavbarRootsState extends State<NavbarRoots> {
     // Home Screen
     HomeScreen(),
     // Messages Screen
-    Container(),
+    MessagesScreen(),
     // Schedule Screen
     ScheduleScreen(),
     // Settings Screen
