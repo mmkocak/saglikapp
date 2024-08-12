@@ -27,6 +27,7 @@ class MessagesScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 30),
+          // Arama widgeti başlangıç
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Container(
@@ -63,6 +64,25 @@ class MessagesScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
+          //Arama widget bitimi
+           SizedBox(height: 90,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: 6,
+            shrinkWrap: true,
+            itemBuilder: (context, index){
+              return Container(
+                margin: EdgeInsets.symmetric(horizontal: 12),
+                width: 65,
+                height: 65,
+                decoration: BoxDecoration(
+                  
+                ),
+              );
+            }
+          ),
+          ),
+          
         ],
       ),
     );
