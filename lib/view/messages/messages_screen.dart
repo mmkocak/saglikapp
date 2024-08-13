@@ -7,7 +7,10 @@ class MessagesScreen extends StatelessWidget {
     "doctor2.jpg",
     "doctor3.jpg",
     "doctor4.jpg",
-    "doctors.jpg",
+     "doctor1.jpg",
+    "doctor2.jpg",
+    "doctor3.jpg",
+    "doctor4.jpg",
   ];
 
   @override
@@ -32,10 +35,10 @@ class MessagesScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              decoration: BoxDecoration(
+              decoration:  BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
-                boxShadow: [
+                 boxShadow: const [
                   BoxShadow(
                     color: Colors.black12,
                     blurRadius: 10,
@@ -50,39 +53,86 @@ class MessagesScreen extends StatelessWidget {
                     width: 300,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 15),
-                      child:TextFormField(
+                      child: TextFormField(
                         decoration: const InputDecoration(
-                          hintText:  "Ara",
+                          hintText: "Ara",
                           border: InputBorder.none,
                         ),
-                      ) ,
+                      ),
                     ),
                   ),
-                  Icon(Icons.search, color: Color(0xFF7165d6),),
+                  Icon(
+                    Icons.search,
+                    color: Color(0xFF7165d6),
+                  ),
                 ],
               ),
             ),
           ),
+           //Arama widget bitimi
           const SizedBox(height: 20),
-          //Arama widget bitimi
-           SizedBox(height: 90,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: 6,
-            shrinkWrap: true,
-            itemBuilder: (context, index){
-              return Container(
-                margin: EdgeInsets.symmetric(horizontal: 12),
-                width: 65,
-                height: 65,
-                decoration: BoxDecoration(
-                  
-                ),
-              );
-            }
+         // Profil Menüsü Başlangıcı
+          SizedBox(
+            height: 90,
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: imgs.length,
+                shrinkWrap: true,
+                itemBuilder: (context, index) {
+                  return Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 12),
+                    width: 65,
+                    height: 65,
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black12,
+                            spreadRadius: 2,
+                            blurRadius: 10,
+                          )
+                        ]),
+                    child: Stack(
+                      textDirection: TextDirection.rtl,
+                      children: [
+                        Center(
+                          child: Container(
+                            height: 65,
+                            width: 65,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(30),
+                              child: Image.asset(
+                                "assets/images/${imgs[index]}",
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        ),
+                        
+                        Container(
+                          margin: const EdgeInsets.all(4),
+                          padding: const EdgeInsets.all(3),
+                          height: 20,
+                          width: 20,
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              color: Colors.green,
+                              shape: BoxShape.circle
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  );
+                }),
           ),
-          ),
-          
+           //Profil Menüsü Bitimi
+
         ],
       ),
     );
