@@ -71,6 +71,11 @@ class MessagesScreen extends StatelessWidget {
           ),
            //Arama widget bitimi
           const SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text("Aktif Olan Doktorlar", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+          ),
+          SizedBox(height: 10,),
          // Profil Menüsü Başlangıcı
           SizedBox(
             height: 90,
@@ -132,7 +137,46 @@ class MessagesScreen extends StatelessWidget {
                 }),
           ),
            //Profil Menüsü Bitimi
-
+            const SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text("Son sohbetler", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+          ),
+          
+           // Mesaj Kutusu başlangıç
+          ListView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: 6,
+            shrinkWrap: true,
+            itemBuilder: (context, index){
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: ListTile(
+                  onTap: () {
+                    
+                  },
+                  leading: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage("assets/images/${imgs[index]}"),
+                  ),
+                  title: Text("Dr. Doktor Adı", style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                  subtitle: Text("Merhaba, doktor orada mısın ?", 
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black54
+                  ),
+                  ),
+                  trailing: Text("22:00", style: TextStyle(fontSize: 15, color: Colors.black54),),
+                ),
+              );
+            }
+            
+            ),
         ],
       ),
     );
