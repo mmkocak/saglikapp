@@ -61,7 +61,7 @@ class MessagesScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Icon(
+                 const Icon(
                     Icons.search,
                     color: Color(0xFF7165d6),
                   ),
@@ -71,11 +71,11 @@ class MessagesScreen extends StatelessWidget {
           ),
            //Arama widget bitimi
           const SizedBox(height: 20),
-          Padding(
+        const   Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text("Aktif Olan Doktorlar", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
           ),
-          SizedBox(height: 10,),
+         const SizedBox(height: 10,),
          // Profil Menüsü Başlangıcı
           SizedBox(
             height: 90,
@@ -138,7 +138,7 @@ class MessagesScreen extends StatelessWidget {
           ),
            //Profil Menüsü Bitimi
             const SizedBox(height: 10),
-          Padding(
+          const Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text("Son sohbetler", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
           ),
@@ -159,11 +159,11 @@ class MessagesScreen extends StatelessWidget {
                     radius: 30,
                     backgroundImage: AssetImage("assets/images/${imgs[index]}"),
                   ),
-                  title: Text("Dr. Doktor Adı", style: TextStyle(
+                  title: const Text("Dr. Doktor Adı", style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),),
-                  subtitle: Text("Merhaba, doktor orada mısın ?", 
+                  subtitle: const Text("Merhaba, doktor orada mısın ?", 
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -171,7 +171,7 @@ class MessagesScreen extends StatelessWidget {
                     color: Colors.black54
                   ),
                   ),
-                  trailing: Text("22:00", style: TextStyle(fontSize: 15, color: Colors.black54),),
+                  trailing: const  Text("22:00", style: TextStyle(fontSize: 15, color: Colors.black54),),
                 ),
               );
             }
