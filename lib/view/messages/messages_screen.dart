@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:saglikapp/view/chat/chat_screen.dart';
 
 class MessagesScreen extends StatelessWidget {
   MessagesScreen({Key? key}) : super(key: key);
@@ -153,7 +154,7 @@ class MessagesScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 10),
                 child: ListTile(
                   onTap: () {
-                    
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatScreen()));
                   },
                   leading: CircleAvatar(
                     radius: 30,
