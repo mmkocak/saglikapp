@@ -18,7 +18,7 @@ class ChatSample extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               decoration: const BoxDecoration(color: Color(0xFFE1E1E2)),
               child: const Text(
-                "Merhaba bayan , size nasıl yardımcı olabilirim?",
+                "Merhaba hanımefendi , size nasıl yardımcı olabilirim?",
                 style: TextStyle(fontSize: 16),
               ),
             ),
@@ -37,7 +37,7 @@ class ChatSample extends StatelessWidget {
                   color: Color(0xFF7165d6),
                 ),
                 child: const Text(
-                  "Merhaba doktor, size hastayım 😂",
+                  "Merhaba doktor, Kalbim ağrıyor böbrek taşı düşürüyorum galiba !!",
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
               ),
