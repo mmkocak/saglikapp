@@ -1,16 +1,20 @@
-# saglikapp
+# Sağlıkçı Uygulaması
+Bu uygulama toplam 9 sayfadan oluşmaktadır. Sadece flutter ile front-end yapılmıştır, backendi ve state managementi yoktur
 
-Flutter ile Sağlıkçı uygulaması
+<img src="screenshout/image1.png" alt="1. Resim" width="400"/>
 
-## Getting Started
+<img src="screenshout/image2.png" alt="2. Resim" width="400"/>
 
-This project is a starting point for a Flutter application.
+<img src="screenshout/image3.png" alt="3. Resim" width="400"/>
 
-A few resources to get you started if this is your first Flutter project:
+<img src="screenshout/image4.png" alt="4. Resim" width="400"/>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="screenshout/image5.png" alt="5. Resim" width="400"/>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="screenshout/image6.png" alt="6. Resim" width="400"/>
+
+<img src="screenshout/image7.png" alt="7. Resim" width="400"/>
+
+<img src="screenshout/image8.png" alt="8. Resim" width="400"/>
+
+<img src="screenshout/image9.png" alt="9. Resim" width="400"/>
